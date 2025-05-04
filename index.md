@@ -1,7 +1,3 @@
----
-title: LaTeX Cheatsheet
-theme: jekyll-theme-slate
----
 # LaTeX Cheatsheet
 
 Welcome! This is a quick-reference guide for LaTeX compiled by Dave Richeson.

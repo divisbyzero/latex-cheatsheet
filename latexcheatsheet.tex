@@ -4,11 +4,50 @@
 \usepackage{calc}
 \usepackage{ifthen}
 \usepackage[landscape]{geometry}
-\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{xcolor}
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  urlcolor=blue!60!black,
+  citecolor=blue!60!black
+]{hyperref}
+\usepackage{titlesec}
+\usepackage{tcolorbox}
 
+\definecolor{indigo}{RGB}{63, 81, 181}
+\colorlet{sectioncolor}{indigo!80!black}
+\colorlet{subsectioncolor}{teal!60!black}
+
+\newcommand{\ColorSection}[1]{\par\vspace{1.5ex}\noindent\textcolor{sectioncolor}{\Large\bfseries #1}\par\vspace{0.75ex}}
+\newcommand{\ColorSubsection}[1]{\par\vspace{1ex}\noindent\textcolor{subsectioncolor}{\normalsize\bfseries #1}\par\vspace{0.5ex}}
+
+
+\definecolor{titlecolor}{RGB}{184, 134, 11}
+
+
+
+\tcbset{
+  resourcebox/.style={
+    colback=red!5, 
+    colframe=red!70!black!90,
+    rounded corners,
+    boxrule=0.5pt,
+    boxsep=2pt, left=2pt, right=2pt, top=2pt, bottom=2pt,
+    fonttitle=\bfseries\Large
+  },
+  notebox/.style={
+    colback=cyan!5, 
+    colframe=cyan!50!black,
+    rounded corners,
+    boxrule=0.5pt,
+    boxsep=2pt, left=2pt, right=2pt, top=2pt, bottom=2pt,
+    fonttitle=\bfseries\Large
+  }
+}
+%orange!60!black
 
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
-    { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
+    { \geometry{top=0.37in,left=0.37in,right=0.37in,bottom=0.37in} }
 	{\ifthenelse{ \lengthtest{ \paperwidth = 297mm}}
 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
 		{\geometry{top=1cm,left=1cm,right=1cm,bottom=1cm} }
@@ -38,8 +77,9 @@
 \raggedright
 \footnotesize
 
+
 \begin{center}
-     \Large{\textbf{A quick guide to \LaTeX}} \\
+\textcolor{titlecolor}{\Huge\bfseries A Quick Guide to \LaTeX}
 \end{center}
 \begin{multicols}{3}
 \setlength{\premulticols}{1pt}
@@ -47,44 +87,39 @@
 \setlength{\multicolsep}{1pt}
 \setlength{\columnsep}{2pt}
 
-\section{What is \LaTeX?}
-\LaTeX (usually pronounced ``LAY teck,'' sometimes ``LAH teck,'' and never ``LAY tex'') is a mathematics typesetting program that is the standard for most professional mathematics writing. It is based on the typesetting program \TeX\ created by Donald Knuth of Stanford University (his first version appeared in 1978). Leslie Lamport was responsible for creating \LaTeX\, a more user friendly version of \TeX. A team of \LaTeX\ programmers created the current version,  \LaTeX\ 2$\varepsilon$.
 
-\section{Math vs. text vs. functions}
-In properly typeset mathematics  variables appear in italics (e.g., $f(x)=x^{2}+2x-3$). The exception to this rule is predefined functions (e.g., $\sin (x)$). Thus it is important to \textbf{always} treat text, variables, and functions correctly. See the difference between $x$ and x, -1 and $-1$, and $sin(x)$ and $\sin(x)$.  
-
-There are two ways to present a mathematical expression--- \emph{inline} or as an \emph{equation}.
-
-\subsection{Inline mathematical expressions}
-Inline expressions occur in the middle of a sentence.  To produce an inline expression, place the math expression between dollar signs (\verb!$!).  For example, typing \verb!$90^{\circ}$ is the same as $\frac{\pi}{2}$ radians!  yields $90^{\circ}$ is the same as $\frac{\pi}{2}$ radians.
-
-\subsection{Equations}
-Equations are mathematical expressions that are given their own line and are centered on the page.  These are usually used for important equations that deserve to be showcased on their own line or for large equations that cannot fit inline. To produce an inline expression, place the mathematical expression  between the symbols  \verb!\[! and \verb!\]!. Typing \verb!\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]! yields \[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\]
- 
-\subsection{Displaystyle} 
-To get full-sized inline mathematical expressions  use  \verb!\displaystyle!. Use this sparingly. Typing \verb!I want this $\displaystyle \sum_{n=1}^{\infty}! \verb!\frac{1}{n}$, not this $\sum_{n=1}^{\infty}! \verb!\frac{1}{n}$.! yields\\ I want  this $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}$, not this $\sum_{n=1}^{\infty}\frac{1}{n}.$
+\begin{tcolorbox}[notebox, title=What is \LaTeX?]
+\LaTeX (usually pronounced ``LAY teck,'' sometimes ``LAH teck,'' and never ``LAY tex'') is a mathematics typesetting program that is the standard for most professional mathematics writing. It is based on the typesetting program \TeX\ created by Donald Knuth (his first version appeared in 1978). Leslie Lamport created \LaTeX, a more user-friendly version of \TeX. A team of \LaTeX\ programmers created the current version,  \LaTeX\ 2$\varepsilon$.
+\end{tcolorbox}
 
 
-\section{Images}
 
-You can put images (pdf, png, jpg, or gif) in your document. They need to be in the same location as your .tex file when you compile the document. Omit   \verb![width=.5in]! if you want the image to be full-sized.
+\ColorSection{Text vs. Math vs. Functions}
+In properly typeset mathematics, variables appear in italics (e.g., $f(x)=x^{2}+2x-3$). The exception to this rule is predefined functions (like $\sin (x)$). Thus, it is important to \textbf{always} treat text, variables, and functions correctly. See the difference between $x$ and x, -1 and $-1$, and $sin(x)$ and $\sin(x)$.  
 
-\verb!\begin{figure}[ht]!\\
-\verb!\includegraphics[width=.5in]{imagename.jpg}!\\
-\verb!\caption{The (optional) caption goes here.}!\\
-\verb!\end{figure}!
-
-\subsection{Text decorations}
-
+\ColorSubsection{Text Decorations}
 Your text can be \textit{italics} (\verb!\textit{italics}!), \textbf{boldface} (\verb!\textbf{boldface}!), or \underline{underlined} (\verb!\underline{underlined}!).
 
-Your math can contain boldface, $\mathbf{R}$ (\verb!\mathbf{R}!), or blackboard bold, $\mathbb{R}$ (\verb!\mathbb{R}!). You may want to used these to express the sets of real numbers ($\mathbb{R}$ or $\mathbf{R}$), integers ($\mathbb{Z}$ or $\mathbf{Z}$), rational numbers ($\mathbb{Q}$ or $\mathbf{Q}$), and natural numbers ($\mathbb{N}$ or $\mathbf{N}$).
+Your math can contain boldface, $\mathbf{R}$ (\verb!\mathbf{R}!), or blackboard bold, $\mathbb{R}$ (\verb!\mathbb{R}!). You may want to use these to express the sets of real numbers ($\mathbb{R}$ or $\mathbf{R}$), integers ($\mathbb{Z}$ or $\mathbf{Z}$), rational numbers ($\mathbb{Q}$ or $\mathbf{Q}$), and natural numbers ($\mathbb{N}$ or $\mathbf{N}$).
 
-To have text appear in a math expression use \verb!\text!. \verb!(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}! yields $(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}$. (Without the \verb!\text! command it treats ``and'' as three variables: $(0,1]=\{x\in\mathbb{R}:x>0 and x\le 1\}$.)
+To have text appear in a math expression, use \verb!\text!. \verb!(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}! yields $(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}$. (Without the \verb!\text! command it treats ``and'' as three variables: $(0,1]=\{x\in\mathbb{R}:x>0 and x\le 1\}$.)
+
+\ColorSubsection{Inline Mathematical Expressions}
+Place a math expression between dollar signs (\verb!$!) to produce an inline expression.  For example, typing \verb!$90^{\circ}$! \verb!is the same as $\frac{\pi}{2}$ radians!  yields $90^{\circ}$ is the same as $\frac{\pi}{2}$ radians.
+
+\ColorSubsection{Display Equations}
+Display equations are mathematical expressions given their own line and centered on the page. They are usually important equations that deserve to be showcased on their own line, or for tall or long equations that don't fit inline. To produce a display equation, surround the mathematical expression with \verb!\[! and \verb!\]!. Typing \verb!\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]! yields \[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\]
+ 
+\ColorSubsection{Displaystyle} 
+To get full-sized inline mathematical expressions, use  \verb!\displaystyle!. Use this sparingly. Typing \verb!I want this $\displaystyle \sum_{n=1}^{\infty}! \verb!\frac{1}{n}$, not this $\sum_{n=1}^{\infty}! \verb!\frac{1}{n}$.! yields\\ I want  this $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}$, not this $\sum_{n=1}^{\infty}\frac{1}{n}.$
 
 
 
-\section{Spaces and new lines}
+\columnbreak
+
+
+
+\ColorSection{Spaces and New Lines}
 
 \LaTeX\ ignores extra spaces and new lines. For example, 
 
@@ -96,7 +131,7 @@ This   sentence will       look
 fine after      it is     compiled.
 
 
-Leave one full empty line between two paragraphs. Place \verb!\\! at the end of a line to create a new line (but not create a new paragraph).
+Leave one empty line between two paragraphs. Place \verb!\\! at the end of a line to create a new line (but not a new paragraph). Use  \verb!\noindent! to prevent a paragraph from indenting.
 
 \verb!This!
 
@@ -114,13 +149,24 @@ compiles
 like\\
 this.
 
-Use  \verb!\noindent! to prevent a paragraph from indenting.
 
-\section{Comments}
 
-Use \verb!%! to create a comment. Nothing on the line after the \verb!%! will be typeset. \verb!$f(x)=\sin(x)$ %this is the sine function! yields $f(x)=\sin(x)$%this is the sine function
+\ColorSection{Comments}
 
-\section{Delimiters}
+Use \verb!%! to create a comment. Nothing after \verb!%! will be typeset. \verb!$f(x)=\sin(x)$ %sine function! yields $f(x)=\sin(x)$
+
+\ColorSection{Images}
+
+You can put images (pdf, png, jpg, or gif) in your document. To do so, you need \verb!\usepackage{graphicx}! at the start of your document, and the images need to be in the same directory as your .tex file. Omit   \verb![width=5in]! if you want the image to be full-sized.
+
+\verb!\begin{figure}[ht]!\\
+\verb!\includegraphics[width=5in]{imagename.pdf}!\\
+\verb!\caption{The (optional) caption goes here.}!\\
+\verb!\end{figure}!
+
+
+
+\ColorSection{Delimiters}
 
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
@@ -131,10 +177,10 @@ curly braces& \verb!\{x\}! & \{x\}\\
 
 To make your delimiters large enough to fit the content, use them together with \verb!\right! and \verb!\left!. For example, \verb!\left\{\sin\left(\frac{1}{n}\right)\right\}_{n}^! \verb!{\infty}! produces\\ $\displaystyle \left\{\sin\left(\frac{1}{n}\right)\right\}_{n}^{\infty}$.
 
-Curly braces are non-printing characters that are used to gather text that has more than one character. Observe the differences between the four expressions \verb!x^2!, \verb!x^{2}!, \verb!x^2t!, \verb!x^{2t}! when typeset: $x^2$, $x^{2}$, $x^2t$, $x^{2t}$.
+Curly braces are non-printing characters used to gather text with more than one character. Observe the differences between the four expressions \verb!x^2!, \verb!x^{2}!, \verb!x^2t!, \verb!x^{2t}! when typeset: $x^2$, $x^{2}$, $x^2t$, $x^{2t}$.
 
-
-\section{Lists}
+\columnbreak
+\ColorSection{Lists}
 
 You can produce ordered and unordered lists.
 
@@ -143,10 +189,8 @@ You can produce ordered and unordered lists.
 unordered list&
 \begin{tabular}{l}
 \verb!\begin{itemize}!\\
-\verb!  \item!\\
-\verb!  Thing 1!\\
-\verb!  \item!\\
-\verb!  Thing 2!\\
+\verb!  \item Thing 1!\\
+\verb!  \item Thing 2!\\
 \verb!\end{itemize}!
 \end{tabular}&
 \begin{tabular}{l}
@@ -157,10 +201,8 @@ $\bullet$ Thing 2
 ordered list&
 \begin{tabular}{l}
 \verb!\begin{enumerate}!\\
-\verb!  \item!\\
-\verb!  Thing 1!\\
-\verb!  \item!\\
-\verb!  Thing 2!\\
+\verb!  \item Thing 1!\\
+\verb!  \item Thing 2!\\
 \verb!\end{enumerate}!
 \end{tabular}&
 \begin{tabular}{l}
@@ -170,9 +212,22 @@ ordered list&
 \end{tabular}
 
 
-\section{Symbols (in \emph{math} mode)}
+\ColorSection{Aligned Equations}
 
-\subsection{The basics}
+\begin{tabular}{lll}
+\emph{description} & \emph{command} & \emph{output}\\
+aligned& \verb!\begin{align*}! & \multirow{4}{*}{$\begin{aligned}
+f(0) &= 10\cos(0)\\
+&= 10
+\end{aligned}$}\\
+equations&\verb!f(0) &= 10\cos(0)\\!&\\ 
+&\verb!&= 10!&\\ 
+&\verb!\end{align*}!&
+\end{tabular}
+
+\ColorSection{Symbols in Math Mode}
+
+\ColorSubsection{The basics}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 addition & \verb!+! & $+$\\
@@ -205,9 +260,18 @@ logarithms & \verb!\log_{a}b! & $\log_{a}b$\\
 exponential function & \verb!e^x=\exp(x)! & $e^{x}=\exp(x)$\\
 degree & \verb!\deg(f)! & $\deg(f)$\\
 \end{tabular}
+
+\vfill
+~\\
+
+\hrule
+~\\
+
+Created by Dave Richeson, Dickinson College, \url{divisbyzero.com}
+
 \newpage
 
-\subsection{Functions}
+\ColorSubsection{Functions}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 maps to & \verb!\to! & $\to$\\
@@ -219,7 +283,7 @@ function&\verb!\begin{cases}!&\\
 &\verb!\end{cases}!&
 \end{tabular}
 
-\subsection{Greek and Hebrew letters}
+\ColorSubsection{Greek and Hebrew letters}
 \begin{tabular}{llll}
 \emph{command} & \emph{output}&\emph{command} & \emph{output}\\
 \verb!\alpha! & $\alpha$&\verb!\tau! & $\tau$\\
@@ -245,7 +309,7 @@ function&\verb!\begin{cases}!&\\
 \end{tabular}
 
 
-\subsection{Set theory}
+\ColorSubsection{Set Theory}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 set brackets & \verb!\{1,2,3\}! & $\{1,2,3\}$\\
@@ -273,7 +337,8 @@ limit inferior & \verb!\liminf! & $\liminf$\\
 closure & \verb!\overline{A}! & $\overline{A}$
 \end{tabular}
 
-\subsection{Calculus}
+\columnbreak
+\ColorSubsection{Calculus}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 derivative & \verb!\frac{df}{dx}! & $\displaystyle \frac{df}{dx}$\\
@@ -297,7 +362,7 @@ $\displaystyle \prod_{n=1}^{\infty}a_n$
 
 
 
-\subsection{Logic}
+\ColorSubsection{Logic}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 not & \verb!\sim! & $\sim$\\
@@ -313,7 +378,7 @@ implies & \verb!\Rightarrow! & $\Rightarrow$\\
 equivalent & \verb!\Leftrightarrow! & $\Leftrightarrow$
 \end{tabular}
 
-\subsection{Linear algebra}
+\ColorSubsection{Linear Algebra}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 vector & \verb!\vec{v}! & $\vec{v}$\\
@@ -345,7 +410,8 @@ trace & \verb!\operatorname{tr}(A)! & $\operatorname{tr}(A)$\\
 dimension & \verb!\dim(V)! & $\dim(V)$\\
 \end{tabular}
 
-\subsection{Number theory}
+\columnbreak
+\ColorSubsection{Number Theory}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 divides & \verb!|! & $|$\\
@@ -360,7 +426,7 @@ floor & \verb!\lfloor x \rfloor! & $\lfloor x \rfloor$\\
 
 
 
-\subsection{Geometry and trigonometry}
+\ColorSubsection{Geometry and Trigonometry}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
 angle& \verb!\angle ABC! & $\angle ABC$\\
@@ -378,9 +444,9 @@ inverse cosine& \verb!\arccos! & $\arccos$\\
 inverse tangent& \verb!\arctan! & $\arctan$\\
 \end{tabular}
 
-\section{Symbols (in \emph{text} mode)}
+\ColorSection{Symbols in Text Mode}
 
-The followign symbols do \textbf{not} have to be surrounded by dollar signs.
+The following symbols do \textbf{not} have to be surrounded by dollar signs.
 
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
@@ -398,21 +464,17 @@ en-dash & \verb!pp. 5--15! & pp. 5--15 \\
 em-dash & \verb!Yes---or no?! & Yes---or no? 
 \end{tabular}
 
-\section{Resources}
-\href{http://www.tug.org/}{TUG: The \TeX\ Users Group}\\
-\href{http://www.ctan.org/}{CTAN: The Comprehensive \TeX\ Archive Network}\\
-Handwriting-to-\LaTeX\ sites: \href{http://detexify.kirelabs.org/}{Detexify}, \href{http://webdemo.visionobjects.com/equation.html}{WebEquation}\\
-\href{ftp://tug.ctan.org/pub/tex-archive/info/symbols/comprehensive/symbols-letter.pdf}{The Comprehensive \LaTeX\ Symbol List}\\ 
-\href{http://mirrors.med.harvard.edu/ctan/info/lshort/english/lshort.pdf}{The Not So Short Introduction to \LaTeX\ 2$\varepsilon$}\\
-Software that generates \LaTeX\ code: Mathematica, Maple, GeoGebra\\ %\href{https://prep11geogebra.pbworks.com/w/page/38586775/LaTex%20with%20GeoGebra}{Geogebra to \LaTeX\ }\\
-\LaTeX\ for the Mac: \href{http://www.tug.org/mactex/}{Mac\TeX}\\
-\LaTeX\ for the PC: \href{http://www.texniccenter.org/}{{\TeX}nicCenter} and \href{http://miktex.org/}{MiK\TeX}\\
-\LaTeX\ online: \href{http://www.overleaf.com/}{Overleaf}, \href{http://www.sagemath.org/}{Sage}\\
-\LaTeX\ integration with Microsoft Office, Apple iWork, etc: \href{http://www.dessci.com/en/products/mathtype/}{MathType}, \href{http://www.chachatelier.fr/latexit/}{{\LaTeX}{iT}}
-\vfill
-\hrule
-~\\
-Dave Richeson, Dickinson College, \href{http://divisbyzero.com/}{http://divisbyzero.com/}
+\begin{tcolorbox}[resourcebox, title=Resources]
+\small
+\TeX\ Users Group: \url{tug.org}\\
+CTAN: \url{ctan.org}\\
+Detexify: \url{detexify.kirelabs.org}\\
+Mathpix: \url{mathpix.com}\\
+%Comprehensive Symbol List: \url{ctan.org/pkg/comprehensive}\\
+The Not So Short Introduction to LaTeX2$\epsilon$:\\ \hspace*{2em}\url{ctan.org/pkg/lshort}\\
+Mac: MacTeX \url{tug.org/mactex},\\ \hspace*{2em}LaTeXiT \url{www.chachatelier.fr/latexit}\\
+Windows: TeXnicCenter \url{www.texniccenter.org},\\ \hspace*{2em}MiKTeX (\url{miktex.org})\\
+Online: Overleaf \url{www.overleaf.com},\\ \hspace*{2em}SageMath \url{www.sagemath.org}
+\end{tcolorbox}
 \end{multicols}
-
 \end{document}

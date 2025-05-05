@@ -9,8 +9,8 @@ Welcome! This is a quick-reference guide for LaTeX compiled by Dave Richeson.
 ## Preview
 
 <p align="center">
-  <img src="CheatSheetImage1.png" alt="Cheat Sheet Page 1" width="45%" style="border: 1px solid #ddd; border-radius: 8px; padding: 4px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
-  <img src="CheatSheetImage2.png" alt="Cheat Sheet Page 2" width="45%" style="border: 1px solid #ddd; border-radius: 8px; padding: 4px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+  <img src="CheatSheetImage1.png" alt="Cheat Sheet Page 1" width="45%" style="border: 1px solid #ccc; border-radius: 4px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
+  <img src="CheatSheetImage2.png" alt="Cheat Sheet Page 2" width="45%" style="border: 1px solid #ccc; border-radius: 4px; box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); margin: 10px;">
 </p>
 
 ## Download the LaTeX Source

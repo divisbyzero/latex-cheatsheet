@@ -1,4 +1,4 @@
-# LaTeX Cheatsheet
+# LaTeX Cheat Sheet
 
 A quick-reference guide for LaTeX, originally authored by Dave Richeson.
 

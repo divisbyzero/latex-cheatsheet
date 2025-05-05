@@ -6,6 +6,13 @@ Welcome! This is a quick-reference guide for LaTeX compiled by Dave Richeson.
 
 [View or download the cheat sheet (PDF)](latexcheatsheet.pdf)
 
+## Preview
+
+<p align="center">
+  <img src="CheatSheetImage1.png" alt="Cheat Sheet Page 1" width="45%">
+  <img src="CheatSheetImage2.png" alt="Cheat Sheet Page 2" width="45%">
+</p>
+
 ## Download the LaTeX Source
 
 If you'd like to edit or customize this document, you can download the LaTeX source file here:

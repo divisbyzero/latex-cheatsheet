@@ -91,29 +91,29 @@
 
 
 \begin{tcolorbox}[notebox, title=What is \LaTeX?]
-\LaTeX (usually pronounced ``LAY teck,'' sometimes ``LAH teck,'' and never ``LAY tex'') is a mathematics typesetting program that is the standard for most professional mathematics writing. It is based on the typesetting program \TeX\ created by Donald Knuth (his first version appeared in 1978). Leslie Lamport created \LaTeX, a more user-friendly version of \TeX. A team of \LaTeX\ programmers created the current version,  \LaTeX~2$\varepsilon$.
+\LaTeX (usually pronounced ``LAY teck,'' sometimes ``LAH teck,'' and never ``LAY tex'') is a mathematics typesetting program that is the standard for most professional mathematics writing. It is based on the typesetting program \TeX\ created by Donald Knuth (his first version appeared in 1978). Leslie Lamport created \LaTeX, a more user-friendly version of \TeX. A team of \LaTeX\ programmers created the current version,  \LaTeX~2\(\varepsilon\).
 \end{tcolorbox}
 
 
 
 \ColorSection{Text vs. Math vs. Functions}
-In properly typeset mathematics, variables appear in italics (e.g., $f(x)=x^{2}+2x-3$). The exception to this rule is predefined functions (like $\sin (x)$). Thus, it is important to \textbf{always} treat text, variables, and functions correctly. See the difference between $x$ and x, -1 and $-1$, and $sin(x)$ and $\sin(x)$.  
+In properly typeset mathematics, variables appear in italics (e.g., \(f(x)=x^{2}+2x-3\)). The exception to this rule is predefined functions (like \(\sin (x)\)). Thus, it is important to \textbf{always} treat text, variables, and functions correctly. See the difference between \(x\) and x, -1 and \(-1\), and \(sin(x)\) and \(\sin(x)\).  
 
 \ColorSubsection{Text Decorations}
 Your text can be \textit{italics} (\verb!\textit{italics}!), \textbf{boldface} (\verb!\textbf{boldface}!), or \underline{underlined} (\verb!\underline{underlined}!).
 
-Your math can contain boldface, $\mathbf{R}$ (\verb!\mathbf{R}!), or blackboard bold, $\mathbb{R}$ (\verb!\mathbb{R}!). You may want to use these to express the sets of real numbers ($\mathbb{R}$ or $\mathbf{R}$), integers ($\mathbb{Z}$ or $\mathbf{Z}$), rational numbers ($\mathbb{Q}$ or $\mathbf{Q}$), and natural numbers ($\mathbb{N}$ or $\mathbf{N}$).
+Your math can contain boldface, \(\mathbf{R}\) (\verb!\mathbf{R}!), or blackboard bold, \(\mathbb{R}\) (\verb!\mathbb{R}!). You may want to use these to express the sets of real numbers (\(\mathbb{R}\) or \(\mathbf{R}\)), integers (\(\mathbb{Z}\) or \(\mathbf{Z}\)), rational numbers (\(\mathbb{Q}\) or \(\mathbf{Q}\)), and natural numbers (\(\mathbb{N}\) or \(\mathbf{N}\)).
 
-To have text appear in a math expression, use \verb!\text!. \verb!(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}! yields $(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}$. (Without the \verb!\text! command it treats ``and'' as three variables: $(0,1]=\{x\in\mathbb{R}:x>0 and x\le 1\}$.)
+To have text appear in a math expression, use \verb!\text!. \verb!(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}! yields \((0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}\). (Without the \verb!\text! command it treats ``and'' as three variables: \((0,1]=\{x\in\mathbb{R}:x>0 and x\le 1\}\).)
 
 \ColorSubsection{Inline Mathematical Expressions}
-Place a math expression between dollar signs (\verb!$!) to produce an inline expression.  For example, typing \verb!$90^{\circ}$! \verb!is the same as $\frac{\pi}{2}$ radians!  yields $90^{\circ}$ is the same as $\frac{\pi}{2}$ radians.
+Place a math expression between \verb!\(...\)! to produce an inline expression.  For example, typing \verb!\(90^{\circ}\)! \verb!is the same as \(\frac{\pi}{2}\) radians!  yields \(90^{\circ}\) is the same as \(\frac{\pi}{2}\) radians.
 
 \ColorSubsection{Display Equations}
 Display equations are mathematical expressions given their own line and centered on the page. They are usually important equations that deserve to be showcased on their own line, or for tall or long equations that don't fit inline. To produce a display equation, surround the mathematical expression with \verb!\[! and \verb!\]!. Typing \verb!\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]! yields \[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\]
  
 \ColorSubsection{Displaystyle} 
-To get full-sized inline mathematical expressions, use  \verb!\displaystyle!. Use this sparingly. Typing \verb!I want this $\displaystyle \sum_{n=1}^{\infty}! \verb!\frac{1}{n}$, not this $\sum_{n=1}^{\infty}! \verb!\frac{1}{n}$.! yields\\ I want  this $\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}$, not this $\sum_{n=1}^{\infty}\frac{1}{n}.$
+To get full-sized inline mathematical expressions, use  \verb!\displaystyle!. Use this sparingly. Typing \verb!I want this \(\displaystyle \sum_{n=1}^{\infty}! \verb!\frac{1}{n}\), not this \(\sum_{n=1}^{\infty}! \verb!\frac{1}{n}\).! yields\\ I want  this \(\displaystyle \sum_{n=1}^{\infty}\frac{1}{n}\), not this \(\sum_{n=1}^{\infty}\frac{1}{n}.\)
 
 
 
@@ -155,7 +155,7 @@ this.
 
 \ColorSection{Comments}
 
-Use \verb!%! to create a comment. Nothing after \verb!%! will be typeset. \verb!$f(x)=\sin(x)$ %sine function! yields $f(x)=\sin(x)$
+Use \verb!%! to create a comment. Nothing after \verb!%! will be typeset. \verb!\(f(x)=\sin(x)\) %sine function! yields \(f(x)=\sin(x)\)
 
 \ColorSection{Images}
 
@@ -177,9 +177,9 @@ brackets &\verb![x]! & [x]\\
 curly braces& \verb!\{x\}! & \{x\}\\
 \end{tabular}
 
-To make your delimiters large enough to fit the content, use them together with \verb!\right! and \verb!\left!. For example, \verb!\left\{\sin\left(\frac{1}{n}\right)\right\}_{n}^! \verb!{\infty}! produces\\ $\displaystyle \left\{\sin\left(\frac{1}{n}\right)\right\}_{n}^{\infty}$.
+To make your delimiters large enough to fit the content, use them together with \verb!\right! and \verb!\left!. For example, \verb!\left\{\sin\left(\frac{1}{n}\right)\right\}_{n}^! \verb!{\infty}! produces\\ \(\displaystyle \left\{\sin\left(\frac{1}{n}\right)\right\}_{n}^{\infty}\).
 
-Curly braces are non-printing characters used to gather text with more than one character. Observe the differences between the four expressions \verb!x^2!, \verb!x^{2}!, \verb!x^2t!, \verb!x^{2t}! when typeset: $x^2$, $x^{2}$, $x^2t$, $x^{2t}$.
+Curly braces are non-printing characters used to gather text with more than one character. Observe the differences between the four expressions \verb!x^2!, \verb!x^{2}!, \verb!x^2t!, \verb!x^{2t}! when typeset: \(x^2\), \(x^{2}\), \(x^2t\), \(x^{2t}\).
 
 \columnbreak
 \ColorSection{Lists}
@@ -196,8 +196,8 @@ unordered list&
 \verb!\end{itemize}!
 \end{tabular}&
 \begin{tabular}{l}
-$\bullet$ Thing 1\\
-$\bullet$ Thing 2
+\(\bullet\) Thing 1\\
+\(\bullet\) Thing 2
 \end{tabular}\\
 ~\\
 ordered list&
@@ -218,10 +218,10 @@ ordered list&
 
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-aligned& \verb!\begin{align*}! & \multirow{4}{*}{$\begin{aligned}
+aligned& \verb!\begin{align*}! & \multirow{4}{*}{\(\begin{aligned}
 f(0) &= 10\cos(0)\\
 &= 10
-\end{aligned}$}\\
+\end{aligned}\)}\\
 equations&\verb!f(0) &= 10\cos(0)\\!&\\ 
 &\verb!&= 10!&\\ 
 &\verb!\end{align*}!&
@@ -232,35 +232,35 @@ equations&\verb!f(0) &= 10\cos(0)\\!&\\
 \ColorSubsection{The basics}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-addition & \verb!+! & $+$\\
-subtraction & \verb!-! & $-$\\
-plus or minus & \verb!\pm! & $\pm$\\
-multiplication (times) & \verb!\times! & $\times$\\
-multiplication (dot) & \verb!\cdot! & $\cdot$\\
-division symbol & \verb!\div! & $\div$\\
-division (slash) & \verb!/! & $/$\\
-circle plus & \verb!\oplus! & $\oplus$\\
-circle times & \verb!\otimes! & $\otimes$\\
-equal & \verb!=! & $=$\\
-not equal & \verb!\ne! & $\ne$\\
-less than & \verb!<! & $<$\\
-greater than & \verb!>! & $>$\\
-less than or equal to & \verb!\le! & $\le$\\
-greater than or equal to & \verb!\ge! & $\ge$\\
-approximately equal to & \verb!\approx! & $\approx$\\
-infinity & \verb!\infty! & $\infty$\\
-dots & \verb!1,2,3,\ldots! & $1,2,3,\ldots$\\
-dots & \verb!1+2+3+\cdots! & $1+2+3+\cdots$\\
-fraction & \verb!\frac{a}{b}! & $\frac{a}{b}$\\
-square root & \verb!\sqrt{x}! & $\sqrt{x}$\\
-$n$th root & \verb!\sqrt[n]{x}! & $\sqrt[n]{x}$\\
-exponentiation & \verb!a^b! & $a^{b}$\\
-subscript & \verb!a_b! & $a_{b}$\\
-absolute value & \verb!|x|! & $|x|$\\
-natural log  & \verb!\ln(x)! & $\ln(x)$\\
-logarithms & \verb!\log_{a}b! & $\log_{a}b$\\
-exponential function & \verb!e^x=\exp(x)! & $e^{x}=\exp(x)$\\
-degree & \verb!\deg(f)! & $\deg(f)$\\
+addition & \verb!+! & \(+\)\\
+subtraction & \verb!-! & \(-\)\\
+plus or minus & \verb!\pm! & \(\pm\)\\
+multiplication (times) & \verb!\times! & \(\times\)\\
+multiplication (dot) & \verb!\cdot! & \(\cdot\)\\
+division symbol & \verb!\div! & \(\div\)\\
+division (slash) & \verb!/! & \(/\)\\
+circle plus & \verb!\oplus! & \(\oplus\)\\
+circle times & \verb!\otimes! & \(\otimes\)\\
+equal & \verb!=! & \(=\)\\
+not equal & \verb!\ne! & \(\ne\)\\
+less than & \verb!<! & \(<\)\\
+greater than & \verb!>! & \(>\)\\
+less than or equal to & \verb!\le! & \(\le\)\\
+greater than or equal to & \verb!\ge! & \(\ge\)\\
+approximately equal to & \verb!\approx! & \(\approx\)\\
+infinity & \verb!\infty! & \(\infty\)\\
+dots & \verb!1,2,3,\ldots! & \(1,2,3,\ldots\)\\
+dots & \verb!1+2+3+\cdots! & \(1+2+3+\cdots\)\\
+fraction & \verb!\frac{a}{b}! & \(\frac{a}{b}\)\\
+square root & \verb!\sqrt{x}! & \(\sqrt{x}\)\\
+\(n\)th root & \verb!\sqrt[n]{x}! & \(\sqrt[n]{x}\)\\
+exponentiation & \verb!a^b! & \(a^{b}\)\\
+subscript & \verb!a_b! & \(a_{b}\)\\
+absolute value & \verb!|x|! & \(|x|\)\\
+natural log  & \verb!\ln(x)! & \(\ln(x)\)\\
+logarithms & \verb!\log_{a}b! & \(\log_{a}b\)\\
+exponential function & \verb!e^x=\exp(x)! & \(e^{x}=\exp(x)\)\\
+degree & \verb!\deg(f)! & \(\deg(f)\)\\
 \end{tabular}
 
 \vfill
@@ -276,9 +276,9 @@ Created by Dave Richeson, Dickinson College, \url{divisbyzero.com}
 \ColorSubsection{Functions}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-maps to & \verb!\to! & $\to$\\
-composition& \verb!\circ! & $\circ$\\
-piecewise& \verb!|x|=! & \multirow{5}{*}{$\displaystyle |x|=\begin{cases}x&x\ge 0\\-x&x<0\end{cases}$}\\
+maps to & \verb!\to! & \(\to\)\\
+composition& \verb!\circ! & \(\circ\)\\
+piecewise& \verb!|x|=! & \multirow{5}{*}{\(\displaystyle |x|=\begin{cases}x&x\ge 0\\-x&x<0\end{cases}\)}\\
 function&\verb!\begin{cases}!&\\ 
 &\verb!x & x\ge 0\\!&\\ 
 &\verb!-x & x<0!&\\ 
@@ -288,77 +288,77 @@ function&\verb!\begin{cases}!&\\
 \ColorSubsection{Greek and Hebrew letters}
 \begin{tabular}{llll}
 \emph{command} & \emph{output}&\emph{command} & \emph{output}\\
-\verb!\alpha! & $\alpha$&\verb!\tau! & $\tau$\\
-\verb!\beta! & $\beta$&\verb!\theta! & $\theta$\\
-\verb!\chi! & $\chi$&\verb!\upsilon! & $\upsilon$\\
-\verb!\delta! & $\delta$&\verb!\xi! & $\xi$\\
-\verb!\epsilon! & $\epsilon$&\verb!\zeta! & $\zeta$\\
-\verb!\varepsilon! & $\varepsilon$&\verb!\Delta! & $\Delta$\\
-\verb!\eta! & $\eta$&\verb!\Gamma! & $\Gamma$\\
-\verb!\gamma! & $\gamma$&\verb!\Lambda! & $\Lambda$\\
-\verb!\iota! & $\iota$&\verb!\Omega! & $\Omega$\\
-\verb!\kappa! & $\kappa$&\verb!\Phi! & $\Phi$\\
-\verb!\lambda! & $\lambda$&\verb!\Pi! & $\Pi$\\
-\verb!\mu! & $\mu$&\verb!\Psi! & $\Psi$\\
-\verb!\nu! & $\nu$&\verb!\Sigma! & $\Sigma$\\
-\verb!\omega! & $\omega$&\verb!\Theta! & $\Theta$\\
-\verb!\phi! & $\phi$&\verb!\Upsilon! & $\Upsilon$\\
-\verb!\varphi! & $\varphi$&\verb!\Xi! & $\Xi$\\
-\verb!\pi! & $\pi$&\verb!\aleph! & $\aleph$\\
-\verb!\psi! & $\psi$&\verb!\beth! & $\beth$\\
-\verb!\rho! & $\rho$&\verb!\gimel! & $\gimel$\\
-\verb!\sigma! & $\sigma$&\verb!\daleth! & $\daleth$
+\verb!\alpha! & \(\alpha\)&\verb!\tau! & \(\tau\)\\
+\verb!\beta! & \(\beta\)&\verb!\theta! & \(\theta\)\\
+\verb!\chi! & \(\chi\)&\verb!\upsilon! & \(\upsilon\)\\
+\verb!\delta! & \(\delta\)&\verb!\xi! & \(\xi\)\\
+\verb!\epsilon! & \(\epsilon\)&\verb!\zeta! & \(\zeta\)\\
+\verb!\varepsilon! & \(\varepsilon\)&\verb!\Delta! & \(\Delta\)\\
+\verb!\eta! & \(\eta\)&\verb!\Gamma! & \(\Gamma\)\\
+\verb!\gamma! & \(\gamma\)&\verb!\Lambda! & \(\Lambda\)\\
+\verb!\iota! & \(\iota\)&\verb!\Omega! & \(\Omega\)\\
+\verb!\kappa! & \(\kappa\)&\verb!\Phi! & \(\Phi\)\\
+\verb!\lambda! & \(\lambda\)&\verb!\Pi! & \(\Pi\)\\
+\verb!\mu! & \(\mu\)&\verb!\Psi! & \(\Psi\)\\
+\verb!\nu! & \(\nu\)&\verb!\Sigma! & \(\Sigma\)\\
+\verb!\omega! & \(\omega\)&\verb!\Theta! & \(\Theta\)\\
+\verb!\phi! & \(\phi\)&\verb!\Upsilon! & \(\Upsilon\)\\
+\verb!\varphi! & \(\varphi\)&\verb!\Xi! & \(\Xi\)\\
+\verb!\pi! & \(\pi\)&\verb!\aleph! & \(\aleph\)\\
+\verb!\psi! & \(\psi\)&\verb!\beth! & \(\beth\)\\
+\verb!\rho! & \(\rho\)&\verb!\gimel! & \(\gimel\)\\
+\verb!\sigma! & \(\sigma\)&\verb!\daleth! & \(\daleth\)
 \end{tabular}
 
 
 \ColorSubsection{Set Theory}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-set brackets & \verb!\{1,2,3\}! & $\{1,2,3\}$\\
-element of & \verb!\in! & $\in$\\
-not an element of & \verb!\not\in! & $\not\in$\\
-subset of & \verb!\subset! & $\subset$\\
-subset of & \verb!\subseteq! & $\subseteq$\\
-not a subset of & \verb!\not\subset! & $\not\subset$\\
-contains & \verb!\supset! & $\supset$\\
-contains & \verb!\supseteq! & $\supseteq$\\
-union & \verb!\cup! & $\cup$\\
-intersection & \verb!\cap! & $\cap$\\
+set brackets & \verb!\{1,2,3\}! & \(\{1,2,3\}\)\\
+element of & \verb!\in! & \(\in\)\\
+not an element of & \verb!\not\in! & \(\not\in\)\\
+subset of & \verb!\subset! & \(\subset\)\\
+subset of & \verb!\subseteq! & \(\subseteq\)\\
+not a subset of & \verb!\not\subset! & \(\not\subset\)\\
+contains & \verb!\supset! & \(\supset\)\\
+contains & \verb!\supseteq! & \(\supseteq\)\\
+union & \verb!\cup! & \(\cup\)\\
+intersection & \verb!\cap! & \(\cap\)\\
 big union & 
 \verb!\bigcup_{n=1}^{10}A_n! &
-$\displaystyle \bigcup_{n=1}^{10}A_{n}$\\
-big intersection & \verb!\bigcap_{n=1}^{10}A_n! &$\displaystyle \bigcap_{n=1}^{10}A_{n}$\\
-empty set & \verb!\emptyset! & $\emptyset$\\
-power set & \verb!\mathcal{P}! & $\mathcal{P}$\\
-minimum & \verb!\min! & $\min$\\
-maximum & \verb!\max! & $\max$\\
-supremum & \verb!\sup! & $\sup$\\
-infimum & \verb!\inf! & $\inf$\\
-limit superior & \verb!\limsup! & $\limsup$\\
-limit inferior & \verb!\liminf! & $\liminf$\\
-closure & \verb!\overline{A}! & $\overline{A}$
+\(\displaystyle \bigcup_{n=1}^{10}A_{n}\)\\
+big intersection & \verb!\bigcap_{n=1}^{10}A_n! &\(\displaystyle \bigcap_{n=1}^{10}A_{n}\)\\
+empty set & \verb!\emptyset! & \(\emptyset\)\\
+power set & \verb!\mathcal{P}! & \(\mathcal{P}\)\\
+minimum & \verb!\min! & \(\min\)\\
+maximum & \verb!\max! & \(\max\)\\
+supremum & \verb!\sup! & \(\sup\)\\
+infimum & \verb!\inf! & \(\inf\)\\
+limit superior & \verb!\limsup! & \(\limsup\)\\
+limit inferior & \verb!\liminf! & \(\liminf\)\\
+closure & \verb!\overline{A}! & \(\overline{A}\)
 \end{tabular}
 
 \columnbreak
 \ColorSubsection{Calculus}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-derivative & \verb!\frac{df}{dx}! & $\displaystyle \frac{df}{dx}$\\
-derivative & \verb!\f'! & $f'$\\
+derivative & \verb!\frac{df}{dx}! & \(\displaystyle \frac{df}{dx}\)\\
+derivative & \verb!\f'! & \(f'\)\\
 partial derivative & 
 \begin{tabular}{l}
 \verb!\frac{\partial f}!\\ \verb!{\partial x}! 
-\end{tabular}& $\displaystyle \frac{\partial f}{\partial x}$\\
-integral & \verb!\int! & $\displaystyle\int$\\
-double integral & \verb!\iint! & $\displaystyle\iint$\\
-triple integral & \verb!\iiint! & $\displaystyle\iiint$\\
-limits & \verb!\lim_{x\to \infty}! & $\displaystyle \lim_{x\to \infty}$\\
+\end{tabular}& \(\displaystyle \frac{\partial f}{\partial x}\)\\
+integral & \verb!\int! & \(\displaystyle\int\)\\
+double integral & \verb!\iint! & \(\displaystyle\iint\)\\
+triple integral & \verb!\iiint! & \(\displaystyle\iiint\)\\
+limits & \verb!\lim_{x\to \infty}! & \(\displaystyle \lim_{x\to \infty}\)\\
 summation  & 
 \verb!\sum_{n=1}^{\infty}a_n! &
-$\displaystyle \sum_{n=1}^{\infty}a_n$\\
+\(\displaystyle \sum_{n=1}^{\infty}a_n\)\\
 product  & 
 \verb!\prod_{n=1}^{\infty}a_n! &
-$\displaystyle \prod_{n=1}^{\infty}a_n$
+\(\displaystyle \prod_{n=1}^{\infty}a_n\)
 \end{tabular}
 
 
@@ -367,25 +367,25 @@ $\displaystyle \prod_{n=1}^{\infty}a_n$
 \ColorSubsection{Logic}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-not & \verb!\sim! & $\sim$\\
-and & \verb!\land! & $\land$\\
-or & \verb!\lor! & $\lor$\\
-if...then & \verb!\to! & $\to$\\
-if and only if & \verb!\leftrightarrow! & $\leftrightarrow$\\
-logical equivalence & \verb!\equiv! & $\equiv$\\
-therefore & \verb!\therefore! & $\therefore$\\
-there exists  & \verb!\exists! & $\exists$\\
-for all & \verb!\forall! & $\forall$\\
-implies & \verb!\Rightarrow! & $\Rightarrow$\\
-equivalent & \verb!\Leftrightarrow! & $\Leftrightarrow$
+not & \verb!\sim! & \(\sim\)\\
+and & \verb!\land! & \(\land\)\\
+or & \verb!\lor! & \(\lor\)\\
+if...then & \verb!\to! & \(\to\)\\
+if and only if & \verb!\leftrightarrow! & \(\leftrightarrow\)\\
+logical equivalence & \verb!\equiv! & \(\equiv\)\\
+therefore & \verb!\therefore! & \(\therefore\)\\
+there exists  & \verb!\exists! & \(\exists\)\\
+for all & \verb!\forall! & \(\forall\)\\
+implies & \verb!\Rightarrow! & \(\Rightarrow\)\\
+equivalent & \verb!\Leftrightarrow! & \(\Leftrightarrow\)
 \end{tabular}
 
 \ColorSubsection{Linear Algebra}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-vector & \verb!\vec{v}! & $\vec{v}$\\
-vector & \verb!\mathbf{v}! & $\mathbf{v}$\\
-norm & \verb!||\vec{v}||! & $||\vec{v}||$\\
+vector & \verb!\vec{v}! & \(\vec{v}\)\\
+vector & \verb!\mathbf{v}! & \(\mathbf{v}\)\\
+norm & \verb!||\vec{v}||! & \(||\vec{v}||\)\\
 matrix&
 \begin{tabular}{l}
 \verb!\left[!\\
@@ -395,7 +395,7 @@ matrix&
 \verb!7 & 8 & 0!\\
 \verb!\end{array}!\\
 \verb!\right]!\end{tabular}&
-$\displaystyle \left[\begin{array}{ccc}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{array}\right]$\\
+\(\displaystyle \left[\begin{array}{ccc}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{array}\right]\)\\
 \\determinant&
 \begin{tabular}{l}
 \verb!\left|!\\
@@ -406,23 +406,23 @@ $\displaystyle \left[\begin{array}{ccc}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{arr
 \verb!\end{array}!\\
 \verb!\right|!
 \end{tabular}&
-$\displaystyle \left|\begin{array}{ccc}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{array}\right|$\\
-determinant & \verb!\det(A)! & $ \det(A)$\\
-trace & \verb!\operatorname{tr}(A)! & $\operatorname{tr}(A)$\\
-dimension & \verb!\dim(V)! & $\dim(V)$\\
+\(\displaystyle \left|\begin{array}{ccc}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{array}\right|\)\\
+determinant & \verb!\det(A)! & \( \det(A)\)\\
+trace & \verb!\operatorname{tr}(A)! & \(\operatorname{tr}(A)\)\\
+dimension & \verb!\dim(V)! & \(\dim(V)\)\\
 \end{tabular}
 
 \columnbreak
 \ColorSubsection{Number Theory}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-divides & \verb!|! & $|$\\
-does not divide & \verb!\not |! & $\not |$\\
-div & \verb!\operatorname{div}! & $\operatorname{div}$\\
-mod & \verb!\mod! & $\operatorname{mod}$\\
-greatest common divisor & \verb!\gcd! & $\gcd$\\
-ceiling & \verb!\lceil x \rceil! & $\lceil x\rceil$\\
-floor & \verb!\lfloor x \rfloor! & $\lfloor x \rfloor$\\
+divides & \verb!|! & \(|\)\\
+does not divide & \verb!\not |! & \(\not |\)\\
+div & \verb!\operatorname{div}! & \(\operatorname{div}\)\\
+mod & \verb!\mod! & \(\operatorname{mod}\)\\
+greatest common divisor & \verb!\gcd! & \(\gcd\)\\
+ceiling & \verb!\lceil x \rceil! & \(\lceil x\rceil\)\\
+floor & \verb!\lfloor x \rfloor! & \(\lfloor x \rfloor\)\\
 \end{tabular}
 
 
@@ -431,19 +431,19 @@ floor & \verb!\lfloor x \rfloor! & $\lfloor x \rfloor$\\
 \ColorSubsection{Geometry and Trigonometry}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-angle& \verb!\angle ABC! & $\angle ABC$\\
-degree& \verb!90^{\circ}! & $90^{\circ}$\\
-triangle& \verb!\triangle ABC! & $\triangle ABC$\\
-segment& \verb!\overline{AB}! & $\overline{AB}$\\
-sine& \verb!\sin! & $\sin$\\
-cosine& \verb!\cos! & $\cos$\\
-tangent& \verb!\tan! & $\tan$\\
-cotangent& \verb!\cot! & $\cot$\\
-secant& \verb!\sec! & $\sec$\\
-cosecant& \verb!\csc! & $\csc$\\
-inverse sine& \verb!\arcsin! & $\arcsin$\\
-inverse cosine& \verb!\arccos! & $\arccos$\\
-inverse tangent& \verb!\arctan! & $\arctan$\\
+angle& \verb!\angle ABC! & \(\angle ABC\)\\
+degree& \verb!90^{\circ}! & \(90^{\circ}\)\\
+triangle& \verb!\triangle ABC! & \(\triangle ABC\)\\
+segment& \verb!\overline{AB}! & \(\overline{AB}\)\\
+sine& \verb!\sin! & \(\sin\)\\
+cosine& \verb!\cos! & \(\cos\)\\
+tangent& \verb!\tan! & \(\tan\)\\
+cotangent& \verb!\cot! & \(\cot\)\\
+secant& \verb!\sec! & \(\sec\)\\
+cosecant& \verb!\csc! & \(\csc\)\\
+inverse sine& \verb!\arcsin! & \(\arcsin\)\\
+inverse cosine& \verb!\arccos! & \(\arccos\)\\
+inverse tangent& \verb!\arctan! & \(\arctan\)\\
 \end{tabular}
 
 \ColorSection{Symbols in Text Mode}
@@ -452,7 +452,7 @@ The following symbols do \textbf{not} have to be surrounded by dollar signs.
 
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-dollar sign & \verb!\$! & \$ \\
+dollar sign & \verb!\\(! & \\) \\
 percent & \verb!\%! & \% \\
 ampersand & \verb!\&! & \& \\
 pound & \verb!\#! & \# \\
@@ -473,7 +473,7 @@ CTAN: \url{ctan.org}\\
 Detexify: \url{detexify.kirelabs.org}\\
 Mathpix: \url{mathpix.com}\\
 %Comprehensive Symbol List: \url{ctan.org/pkg/comprehensive}\\
-The Not So Short Introduction to LaTeX2$\epsilon$:\\ \hspace*{2em}\url{ctan.org/pkg/lshort}\\
+The Not So Short Introduction to LaTeX2\(\epsilon\):\\ \hspace*{2em}\url{ctan.org/pkg/lshort}\\
 Mac: MacTeX \url{tug.org/mactex},\\ \hspace*{2em}LaTeXiT \url{www.chachatelier.fr/latexit}\\
 Windows: TeXnicCenter \url{www.texniccenter.org},\\ \hspace*{2em}MiKTeX (\url{miktex.org})\\
 Online: Overleaf \url{www.overleaf.com},\\ \hspace*{2em}SageMath \url{www.sagemath.org}

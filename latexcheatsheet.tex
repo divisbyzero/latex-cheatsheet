@@ -107,7 +107,7 @@ Your math can contain boldface, \(\mathbf{R}\) (\verb!\mathbf{R}!), or blackboar
 To have text appear in a math expression, use \verb!\text!. \verb!(0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}! yields \((0,1]=\{x\in\mathbb{R}:x>0\text{ and }x\le 1\}\). (Without the \verb!\text! command it treats ``and'' as three variables: \((0,1]=\{x\in\mathbb{R}:x>0 and x\le 1\}\).)
 
 \ColorSubsection{Inline Mathematical Expressions}
-Place a math expression between \verb!\(...\)! to produce an inline expression.  For example, typing \verb!\(90^{\circ}\)! \verb!is the same as \(\frac{\pi}{2}\) radians!  yields \(90^{\circ}\) is the same as \(\frac{\pi}{2}\) radians.
+Place a math expression between \verb!\(...\)! to produce an inline expression.  For example, typing \verb!\(90^{\circ}\)! \texttt{is the same as } \verb!\(\frac{\pi}{2}\) radians!  yields ``\(90^{\circ}\) is the same as \(\frac{\pi}{2}\) radians''.
 
 \ColorSubsection{Display Equations}
 Display equations are mathematical expressions given their own line and centered on the page. They are usually important equations that deserve to be showcased on their own line, or for tall or long equations that don't fit inline. To produce a display equation, surround the mathematical expression with \verb!\[! and \verb!\]!. Typing \verb!\[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]! yields \[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\]
@@ -155,7 +155,7 @@ this.
 
 \ColorSection{Comments}
 
-Use \verb!%! to create a comment. Nothing after \verb!%! will be typeset. \verb!\(f(x)=\sin(x)\) %sine function! yields \(f(x)=\sin(x)\)
+Use \verb!%! to create a comment. Nothing on the line after \verb!%! will be typeset. \verb!\(f(x)=\sin(x)\) %sine function! yields \(f(x)=\sin(x)\)
 
 \ColorSection{Images}
 
@@ -363,21 +363,22 @@ product  &
 
 
 
-
-\ColorSubsection{Logic}
+\ColorSubsection{Geometry and Trigonometry}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-not & \verb!\sim! & \(\sim\)\\
-and & \verb!\land! & \(\land\)\\
-or & \verb!\lor! & \(\lor\)\\
-if...then & \verb!\to! & \(\to\)\\
-if and only if & \verb!\leftrightarrow! & \(\leftrightarrow\)\\
-logical equivalence & \verb!\equiv! & \(\equiv\)\\
-therefore & \verb!\therefore! & \(\therefore\)\\
-there exists  & \verb!\exists! & \(\exists\)\\
-for all & \verb!\forall! & \(\forall\)\\
-implies & \verb!\Rightarrow! & \(\Rightarrow\)\\
-equivalent & \verb!\Leftrightarrow! & \(\Leftrightarrow\)
+angle& \verb!\angle ABC! & \(\angle ABC\)\\
+degree& \verb!90^{\circ}! & \(90^{\circ}\)\\
+triangle& \verb!\triangle ABC! & \(\triangle ABC\)\\
+segment& \verb!\overline{AB}! & \(\overline{AB}\)\\
+sine& \verb!\sin! & \(\sin\)\\
+cosine& \verb!\cos! & \(\cos\)\\
+tangent& \verb!\tan! & \(\tan\)\\
+cotangent& \verb!\cot! & \(\cot\)\\
+secant& \verb!\sec! & \(\sec\)\\
+cosecant& \verb!\csc! & \(\csc\)\\
+inverse sine& \verb!\arcsin! & \(\arcsin\)\\
+inverse cosine& \verb!\arccos! & \(\arccos\)\\
+inverse tangent& \verb!\arctan! & \(\arctan\)\\
 \end{tabular}
 
 \ColorSubsection{Linear Algebra}
@@ -385,28 +386,24 @@ equivalent & \verb!\Leftrightarrow! & \(\Leftrightarrow\)
 \emph{description} & \emph{command} & \emph{output}\\
 vector & \verb!\vec{v}! & \(\vec{v}\)\\
 vector & \verb!\mathbf{v}! & \(\mathbf{v}\)\\
-norm & \verb!||\vec{v}||! & \(||\vec{v}||\)\\
+norm & \verb!\|\vec{v}\|! & \(\|\vec{v}\|\)\\
 matrix&
 \begin{tabular}{l}
-\verb!\left[!\\
-\verb!\begin{array}{ccc}!\\
+\verb!\begin{bmatrix}!\\
 \verb!1 & 2 & 3 \\!\\
 \verb!4 & 5 & 6\\!\\
 \verb!7 & 8 & 0!\\
-\verb!\end{array}!\\
-\verb!\right]!\end{tabular}&
-\(\displaystyle \left[\begin{array}{ccc}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{array}\right]\)\\
+\verb!\end{bmatrix}!\end{tabular}&
+\(\displaystyle \begin{bmatrix}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{bmatrix}\)\\
 \\determinant&
 \begin{tabular}{l}
-\verb!\left|!\\
-\verb!\begin{array}{ccc}!\\
+\verb!\begin{vmatrix}!\\
 \verb!1 & 2 & 3 \\!\\
 \verb!4 & 5 & 6 \\!\\
 \verb!7 & 8 & 0!\\
-\verb!\end{array}!\\
-\verb!\right|!
+\verb!\end{vmatrix}!
 \end{tabular}&
-\(\displaystyle \left|\begin{array}{ccc}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{array}\right|\)\\
+\(\displaystyle \begin{vmatrix}1 & 2 & 3 \\4 & 5 & 6 \\7 & 8 & 0\end{vmatrix}\)\\
 determinant & \verb!\det(A)! & \( \det(A)\)\\
 trace & \verb!\operatorname{tr}(A)! & \(\operatorname{tr}(A)\)\\
 dimension & \verb!\dim(V)! & \(\dim(V)\)\\
@@ -428,23 +425,22 @@ floor & \verb!\lfloor x \rfloor! & \(\lfloor x \rfloor\)\\
 
 
 
-\ColorSubsection{Geometry and Trigonometry}
+\ColorSubsection{Logic}
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-angle& \verb!\angle ABC! & \(\angle ABC\)\\
-degree& \verb!90^{\circ}! & \(90^{\circ}\)\\
-triangle& \verb!\triangle ABC! & \(\triangle ABC\)\\
-segment& \verb!\overline{AB}! & \(\overline{AB}\)\\
-sine& \verb!\sin! & \(\sin\)\\
-cosine& \verb!\cos! & \(\cos\)\\
-tangent& \verb!\tan! & \(\tan\)\\
-cotangent& \verb!\cot! & \(\cot\)\\
-secant& \verb!\sec! & \(\sec\)\\
-cosecant& \verb!\csc! & \(\csc\)\\
-inverse sine& \verb!\arcsin! & \(\arcsin\)\\
-inverse cosine& \verb!\arccos! & \(\arccos\)\\
-inverse tangent& \verb!\arctan! & \(\arctan\)\\
+not & \verb!\lnot!, \verb!\sim! & \(\lnot\), \(\sim\)\\
+and & \verb!\land! & \(\land\)\\
+or & \verb!\lor! & \(\lor\)\\
+if...then & \verb!\to! & \(\to\)\\
+if and only if & \verb!\leftrightarrow! & \(\leftrightarrow\)\\
+logical equivalence & \verb!\equiv! & \(\equiv\)\\
+therefore & \verb!\therefore! & \(\therefore\)\\
+there exists  & \verb!\exists! & \(\exists\)\\
+for all & \verb!\forall! & \(\forall\)\\
+implies & \verb!\implies!, \verb!\Rightarrow! & \(\implies\), \(\Rightarrow\)\\
+equivalent & \verb!\iff!, \verb!\Leftrightarrow! & \(\iff\), \(\Leftrightarrow\)
 \end{tabular}
+
 
 \ColorSection{Symbols in Text Mode}
 
@@ -452,7 +448,7 @@ The following symbols do \textbf{not} have to be surrounded by dollar signs.
 
 \begin{tabular}{lll}
 \emph{description} & \emph{command} & \emph{output}\\
-dollar sign & \verb!\\(! & \\) \\
+dollar sign & \verb!\$! & \$ \\
 percent & \verb!\%! & \% \\
 ampersand & \verb!\&! & \& \\
 pound & \verb!\#! & \# \\
@@ -476,7 +472,8 @@ Mathpix: \url{mathpix.com}\\
 The Not So Short Introduction to LaTeX2\(\epsilon\):\\ \hspace*{2em}\url{ctan.org/pkg/lshort}\\
 Mac: MacTeX \url{tug.org/mactex},\\ \hspace*{2em}LaTeXiT \url{www.chachatelier.fr/latexit}\\
 Windows: TeXnicCenter \url{www.texniccenter.org},\\ \hspace*{2em}MiKTeX (\url{miktex.org})\\
-Online: Overleaf \url{www.overleaf.com},\\ \hspace*{2em}SageMath \url{www.sagemath.org}
+Online: Overleaf \url{www.overleaf.com},\\ \hspace*{2em}SageMath \url{www.sagemath.org},\\
+%\hspace*{2em} TeX-SX \url{tex.stackexchange.com}
 \end{tcolorbox}
 \end{multicols}
 \end{document}
